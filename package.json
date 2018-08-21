@@ -12,6 +12,7 @@
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
     "osmosis": "^1.1.8",
+    "promise": "^8.0.1",
     "pug": "2.0.0-beta11"
   }
 }
