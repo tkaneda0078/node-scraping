@@ -1,6 +1,6 @@
 'use strict';
 const express = require('express');
-const router  = express.Router();
+const router = express.Router();
 const osmosis = require('osmosis');
 
 const fetchPrefecturesInfo = () => {
@@ -15,7 +15,6 @@ const fetchPrefecturesInfo = () => {
         latlon: 'td[4] div:first'
       })
       .data(data => result.push(data))
-      .error(err => reject(err))
       .done(() => resolve(result));
   });
 };
