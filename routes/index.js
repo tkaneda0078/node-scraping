@@ -15,18 +15,19 @@ const fetchPrefecturesInfo = () => {
         latlon: 'td[4] div:first'
       })
       .data(data => result.push(data))
+      .error(() => reject(err))
       .done(() => resolve(result));
   });
 };
 
 router.get('/', function(req, res, next) {
-  fetchPrefecturesInfo().then(data => {
-    console.log('--------success------');
-    console.log(data);
-  }).catch(err => {
-    console.log('--------error------');
-    console.log(err);
-  });
+  // fetchPrefecturesInfo().then(data => {
+  //   console.log('--------success------');
+  //   console.log(data);
+  // }).catch(err => {
+  //   console.log('--------error------');
+  //   console.log(err);
+  // });
 });
 
 module.exports = router;
